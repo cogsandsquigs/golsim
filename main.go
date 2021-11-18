@@ -1,29 +1,9 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	file, err := os.Open("main.oxyl")
-	if err != nil {
-		fatal(err)
-	}
-	defer file.Close()
+	test := RandomCreature(128, 128, 4)
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		fmt.Println(scanner.Text())
-	}
-
-	if err := scanner.Err(); err != nil {
-		fatal(err)
-	}
-}
-
-func fatal(err error) {
-	fmt.Println(err)
-	os.Exit(1)
+	fmt.Println(test)
 }
