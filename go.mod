@@ -1,3 +1,3 @@
-module github.com/ipratt-code/oxyl
+module main
 
-go 1.17
+go 1.18
